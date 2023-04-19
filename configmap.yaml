@@ -1,0 +1,12 @@
+# define the configuration for mongo-express
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-express-config
+data:
+  ME_CONFIG_MONGODB_SERVER: "mongodb://mongo-service:27017"
+  ME_CONFIG_BASICAUTH_USERNAME: "admin"
+  ME_CONFIG_BASICAUTH_PASSWORD: "password"
+  ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
+  ME_CONFIG_SITE_BASEURL: "/mongo-express"
